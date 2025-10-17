@@ -13,6 +13,7 @@ jobs:
 
       - name: Build iOS dylib
         run: |
+          cd ./iOS
           mkdir -p build
           xcrun -sdk iphoneos clang++ Main.m -dynamiclib -arch arm64 \
             -o build/libSinum.dylib \
